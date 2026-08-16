@@ -24,9 +24,9 @@ const {
     createClient
 } = supabase;
 
-const db = createClient(
-    SUPABASE_URL,
-    SUPABASE_KEY
+const db = supabase.createClient(
+    "https://shkeqdeengzgayrvcpme.supabase.co",
+    "sb_publishable_77x94aRUe9oNKNkai6tQEA_sqxhfiez"
 );
 
 
