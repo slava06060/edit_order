@@ -538,19 +538,19 @@ document
 
 
                 const {
-                    error
-                } = await db
-                    .from("orders")
-                    .insert(order);
+    data,
+    error
+} = await db
+    .from("orders")
+    .insert(order)
+    .select();
 
-
-                if (error) {
-
-                    console.error(error);
-
-                    throw error;
-
-                }
+if (error) {
+    console.error("SUPABASE ERROR:", error);
+    throw new Error(
+        `${error.message} (${error.code || "unknown code"})`
+    );
+}
 
 
                 status.textContent =
@@ -593,7 +593,7 @@ document
 
 
                 status.textContent =
-                    "Something went wrong. Please try again.";
+    `Error: ${error.message}`;
 
 
             } finally {
