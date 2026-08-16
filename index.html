@@ -1,26 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <title>Order an Edit</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
 
     <link rel="stylesheet" href="style.css">
 
     <script src="https://upload-widget.cloudinary.com/latest/global/all.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
+
 
 <body>
 
 <div class="page">
 
     <header class="hero">
-        <p class="eyebrow">EDIT COMMISSIONS</p>
+
+        <p class="eyebrow">
+            EDIT COMMISSIONS
+        </p>
 
         <h1>
             Let's create<br>
@@ -28,17 +47,23 @@
         </h1>
 
         <p class="hero-description">
-            Tell me about your project, your vision and what you want the final edit to feel like.
+            Tell me about your project, your vision,
+            and what you want the final edit to feel like.
         </p>
+
     </header>
 
 
     <form id="orderForm">
 
-        <!-- EDIT TYPE -->
+
+        <!-- 01 -->
+
         <section class="form-section">
 
-            <div class="section-number">01</div>
+            <div class="section-number">
+                01
+            </div>
 
             <div class="section-content">
 
@@ -46,57 +71,96 @@
 
                 <div class="cards three">
 
+
                     <label class="option-card">
-                        <input type="radio" name="editType" value="3D / Cinematic Edit" required>
+
+                        <input
+                            type="radio"
+                            name="editType"
+                            value="3D / Cinematic Edit"
+                            required
+                        >
 
                         <div class="card-inner">
-                            <span class="card-title">3D / Cinematic Edit</span>
+
+                            <span class="card-title">
+                                3D / Cinematic Edit
+                            </span>
 
                             <span class="card-description">
-                                Advanced 3D scenes, camera movement, environments,
-                                objects, lighting and cinematic effects.
+                                Advanced 3D scenes, camera movement,
+                                environments, objects, lighting
+                                and cinematic effects.
                             </span>
+
                         </div>
+
                     </label>
 
 
                     <label class="option-card">
-                        <input type="radio" name="editType" value="Transition Edit">
+
+                        <input
+                            type="radio"
+                            name="editType"
+                            value="Transition Edit"
+                        >
 
                         <div class="card-inner">
-                            <span class="card-title">Transition Edit</span>
+
+                            <span class="card-title">
+                                Transition Edit
+                            </span>
 
                             <span class="card-description">
-                                Smooth transitions, sync, effects, velocity
-                                and creative movement.
+                                Smooth transitions, sync, effects,
+                                velocity and creative movement.
                             </span>
+
                         </div>
+
                     </label>
 
 
                     <label class="option-card">
-                        <input type="radio" name="editType" value="3D Detail Edit">
+
+                        <input
+                            type="radio"
+                            name="editType"
+                            value="3D Detail Edit"
+                        >
 
                         <div class="card-inner">
-                            <span class="card-title">3D Detail Edit</span>
+
+                            <span class="card-title">
+                                3D Detail Edit
+                            </span>
 
                             <span class="card-description">
-                                Custom 3D elements such as objects, accessories,
-                                environments, typography and particles.
+                                Custom 3D elements such as objects,
+                                accessories, environments,
+                                typography and particles.
                             </span>
+
                         </div>
+
                     </label>
+
 
                 </div>
 
             </div>
+
         </section>
 
 
-        <!-- LENGTH -->
+        <!-- 02 -->
+
         <section class="form-section">
 
-            <div class="section-number">02</div>
+            <div class="section-number">
+                02
+            </div>
 
             <div class="section-content">
 
@@ -105,111 +169,190 @@
                 <div class="cards two">
 
                     <label class="option-card small">
-                        <input type="radio" name="length" value="15 seconds" required>
+
+                        <input
+                            type="radio"
+                            name="editLength"
+                            value="15 seconds"
+                            required
+                        >
 
                         <div class="card-inner">
-                            <span class="card-title">15 sec</span>
+
+                            <span class="card-title">
+                                15 sec
+                            </span>
+
                         </div>
+
                     </label>
 
 
                     <label class="option-card small">
-                        <input type="radio" name="length" value="30 seconds">
+
+                        <input
+                            type="radio"
+                            name="editLength"
+                            value="30 seconds"
+                        >
 
                         <div class="card-inner">
-                            <span class="card-title">30 sec</span>
+
+                            <span class="card-title">
+                                30 sec
+                            </span>
+
                         </div>
+
                     </label>
 
                 </div>
 
             </div>
+
         </section>
 
 
-        <!-- PROJECT TYPE -->
+        <!-- 03 -->
+
         <section class="form-section">
 
-            <div class="section-number">03</div>
+            <div class="section-number">
+                03
+            </div>
 
             <div class="section-content">
 
-                <h2>What is this edit?</h2>
+                <h2>What is this project?</h2>
 
-                <select name="projectType" required>
-                    <option value="">Select project type</option>
+                <select
+                    name="projectType"
+                    required
+                >
+
+                    <option value="">
+                        Select project type
+                    </option>
+
                     <option>Brand</option>
                     <option>Product</option>
                     <option>Artist</option>
                     <option>Song</option>
                     <option>Album</option>
+                    <option>Music Video</option>
                     <option>Music Project</option>
-                    <option>Fandom Edit</option>
+                    <option>Fandom</option>
                     <option>Character</option>
                     <option>Celebrity</option>
-                    <option>Movie / TV</option>
+                    <option>Film / TV</option>
+                    <option>Advertisement</option>
                     <option>Other</option>
+
                 </select>
 
             </div>
+
         </section>
 
 
-        <!-- PURPOSE -->
+        <!-- 04 -->
+
         <section class="form-section">
 
-            <div class="section-number">04</div>
+            <div class="section-number">
+                04
+            </div>
 
             <div class="section-content">
 
-                <h2>What is this edit for?</h2>
+                <h2>What is the edit for?</h2>
 
                 <div class="pills">
 
                     <label>
-                        <input type="radio" name="platform" value="TikTok" required>
+                        <input
+                            type="radio"
+                            name="platform"
+                            value="TikTok"
+                            required
+                        >
                         <span>TikTok</span>
                     </label>
 
                     <label>
-                        <input type="radio" name="platform" value="Instagram Reel">
+                        <input
+                            type="radio"
+                            name="platform"
+                            value="Instagram Reel"
+                        >
                         <span>Instagram Reel</span>
                     </label>
 
                     <label>
-                        <input type="radio" name="platform" value="YouTube Short">
+                        <input
+                            type="radio"
+                            name="platform"
+                            value="YouTube Short"
+                        >
                         <span>YouTube Short</span>
                     </label>
 
                     <label>
-                        <input type="radio" name="platform" value="Advertisement">
+                        <input
+                            type="radio"
+                            name="platform"
+                            value="Advertisement"
+                        >
                         <span>Advertisement</span>
                     </label>
 
                     <label>
-                        <input type="radio" name="platform" value="Music Promo">
-                        <span>Music promo</span>
+                        <input
+                            type="radio"
+                            name="platform"
+                            value="Music Promo"
+                        >
+                        <span>Music Promo</span>
                     </label>
 
                     <label>
-                        <input type="radio" name="platform" value="Other">
+                        <input
+                            type="radio"
+                            name="platform"
+                            value="Personal Project"
+                        >
+                        <span>Personal Project</span>
+                    </label>
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="platform"
+                            value="Other"
+                        >
                         <span>Other</span>
                     </label>
 
                 </div>
 
             </div>
+
         </section>
 
 
-        <!-- FEEL -->
+        <!-- 05 -->
+
         <section class="form-section">
 
-            <div class="section-number">05</div>
+            <div class="section-number">
+                05
+            </div>
 
             <div class="section-content">
 
-                <h2>What should the edit feel like?</h2>
+                <h2>
+                    What should the edit feel like?
+                </h2>
 
                 <textarea
                     name="feeling"
@@ -218,17 +361,22 @@
                 ></textarea>
 
             </div>
+
         </section>
 
 
-        <!-- REFERENCES -->
+        <!-- 06 -->
+
         <section class="form-section">
 
-            <div class="section-number">06</div>
+            <div class="section-number">
+                06
+            </div>
 
             <div class="section-content">
 
                 <h2>Show me your vision</h2>
+
 
                 <div class="input-group">
 
@@ -247,30 +395,45 @@
 
                 <div class="upload-box">
 
-                    <div class="upload-icon">+</div>
+                    <div class="upload-icon">
+                        +
+                    </div>
 
-                    <h3>Visual references</h3>
+                    <h3>
+                        Visual references
+                    </h3>
 
                     <p>
                         Upload images, screenshots or Pinterest references.
                     </p>
 
-                    <button type="button" class="upload-button" id="referenceUpload">
+                    <button
+                        type="button"
+                        class="upload-button"
+                        id="referenceUpload"
+                    >
                         Upload references
                     </button>
 
-                    <div id="referenceFiles" class="uploaded-files"></div>
+                    <div
+                        id="referenceFiles"
+                        class="uploaded-files"
+                    ></div>
 
                 </div>
 
             </div>
+
         </section>
 
 
-        <!-- FOOTAGE -->
+        <!-- 07 -->
+
         <section class="form-section">
 
-            <div class="section-number">07</div>
+            <div class="section-number">
+                07
+            </div>
 
             <div class="section-content">
 
@@ -280,61 +443,131 @@
                     Do you have the footage ready?
                 </h3>
 
+
                 <div class="cards three">
 
-                    <label class="option-card">
-                        <input type="radio" name="footageStatus" value="Everything is ready" required>
-
-                        <div class="card-inner">
-                            <span class="card-title">Everything is ready</span>
-                        </div>
-                    </label>
 
                     <label class="option-card">
-                        <input type="radio" name="footageStatus" value="I have some footage">
+
+                        <input
+                            type="radio"
+                            name="footageStatus"
+                            value="Everything is ready"
+                            required
+                        >
 
                         <div class="card-inner">
-                            <span class="card-title">I have some footage</span>
+
+                            <span class="card-title">
+                                Everything is ready
+                            </span>
+
                         </div>
+
                     </label>
+
 
                     <label class="option-card">
-                        <input type="radio" name="footageStatus" value="No footage yet">
+
+                        <input
+                            type="radio"
+                            name="footageStatus"
+                            value="I have some footage"
+                        >
 
                         <div class="card-inner">
-                            <span class="card-title">No footage yet</span>
+
+                            <span class="card-title">
+                                I have some footage
+                            </span>
+
                         </div>
+
                     </label>
+
+
+                    <label class="option-card">
+
+                        <input
+                            type="radio"
+                            name="footageStatus"
+                            value="I need help choosing footage"
+                        >
+
+                        <div class="card-inner">
+
+                            <span class="card-title">
+                                I need help choosing footage
+                            </span>
+
+                        </div>
+
+                    </label>
+
+
+                    <label class="option-card">
+
+                        <input
+                            type="radio"
+                            name="footageStatus"
+                            value="No footage yet"
+                        >
+
+                        <div class="card-inner">
+
+                            <span class="card-title">
+                                No footage yet
+                            </span>
+
+                        </div>
+
+                    </label>
+
 
                 </div>
 
 
                 <div class="upload-box">
 
-                    <div class="upload-icon">+</div>
+                    <div class="upload-icon">
+                        +
+                    </div>
 
-                    <h3>Upload your footage</h3>
+                    <h3>
+                        Upload your footage
+                    </h3>
 
                     <p>
                         Drag & drop your files or choose them from your device.
                     </p>
 
-                    <button type="button" class="upload-button" id="footageUpload">
+                    <button
+                        type="button"
+                        class="upload-button"
+                        id="footageUpload"
+                    >
                         Upload footage
                     </button>
 
-                    <div id="footageFiles" class="uploaded-files"></div>
+                    <div
+                        id="footageFiles"
+                        class="uploaded-files"
+                    ></div>
 
                 </div>
 
             </div>
+
         </section>
 
 
-        <!-- AUDIO -->
+        <!-- 08 -->
+
         <section class="form-section">
 
-            <div class="section-number">08</div>
+            <div class="section-number">
+                08
+            </div>
 
             <div class="section-content">
 
@@ -344,21 +577,50 @@
                     Do you have a specific song/audio?
                 </h3>
 
+
                 <div class="pills">
 
                     <label>
-                        <input type="radio" name="audioStatus" value="Yes" required>
+
+                        <input
+                            type="radio"
+                            name="audioStatus"
+                            value="Yes"
+                            required
+                        >
+
                         <span>Yes</span>
+
                     </label>
 
-                    <label>
-                        <input type="radio" name="audioStatus" value="No, choose something suitable">
-                        <span>No, choose something suitable</span>
-                    </label>
 
                     <label>
-                        <input type="radio" name="audioStatus" value="I'll send it later">
-                        <span>I'll send it later</span>
+
+                        <input
+                            type="radio"
+                            name="audioStatus"
+                            value="No, choose something suitable"
+                        >
+
+                        <span>
+                            No, choose something suitable
+                        </span>
+
+                    </label>
+
+
+                    <label>
+
+                        <input
+                            type="radio"
+                            name="audioStatus"
+                            value="I'll send it later"
+                        >
+
+                        <span>
+                            I'll send it later
+                        </span>
+
                     </label>
 
                 </div>
@@ -379,13 +641,17 @@
                 </div>
 
             </div>
+
         </section>
 
 
-        <!-- DEADLINE -->
+        <!-- 09 -->
+
         <section class="form-section">
 
-            <div class="section-number">09</div>
+            <div class="section-number">
+                09
+            </div>
 
             <div class="section-content">
 
@@ -395,80 +661,166 @@
                     When do you need the edit?
                 </h3>
 
+
                 <div class="pills">
 
                     <label>
-                        <input type="radio" name="deadline" value="No specific deadline" required>
-                        <span>No specific deadline</span>
+
+                        <input
+                            type="radio"
+                            name="deadline"
+                            value="No specific deadline"
+                            required
+                        >
+
+                        <span>
+                            No specific deadline
+                        </span>
+
                     </label>
 
-                    <label>
-                        <input type="radio" name="deadline" value="Within a week">
-                        <span>Within a week</span>
-                    </label>
 
                     <label>
-                        <input type="radio" name="deadline" value="3–5 days">
-                        <span>3–5 days</span>
+
+                        <input
+                            type="radio"
+                            name="deadline"
+                            value="Within a week"
+                        >
+
+                        <span>
+                            Within a week
+                        </span>
+
                     </label>
 
-                    <label>
-                        <input type="radio" name="deadline" value="1–2 days">
-                        <span>1–2 days</span>
-                    </label>
 
                     <label>
-                        <input type="radio" name="deadline" value="As soon as possible">
-                        <span>As soon as possible</span>
+
+                        <input
+                            type="radio"
+                            name="deadline"
+                            value="3–5 days"
+                        >
+
+                        <span>
+                            3–5 days
+                        </span>
+
+                    </label>
+
+
+                    <label>
+
+                        <input
+                            type="radio"
+                            name="deadline"
+                            value="1–2 days"
+                        >
+
+                        <span>
+                            1–2 days
+                        </span>
+
+                    </label>
+
+
+                    <label>
+
+                        <input
+                            type="radio"
+                            name="deadline"
+                            value="As soon as possible"
+                        >
+
+                        <span>
+                            As soon as possible
+                        </span>
+
                     </label>
 
                 </div>
 
             </div>
+
         </section>
 
 
-        <!-- CONTACT -->
+        <!-- 10 -->
+
         <section class="form-section">
 
-            <div class="section-number">10</div>
+            <div class="section-number">
+                10
+            </div>
 
             <div class="section-content">
 
                 <h2>Your details</h2>
 
+
                 <div class="input-grid">
 
                     <div class="input-group">
-                        <label>Name / @username</label>
+
+                        <label>
+                            Name / @username
+                        </label>
+
                         <input
                             type="text"
                             name="clientName"
                             placeholder="@username"
                             required
                         >
+
                     </div>
 
+
                     <div class="input-group">
-                        <label>Email</label>
+
+                        <label>
+                            Email
+                        </label>
+
                         <input
                             type="email"
-                            name="email"
+                            name="clientEmail"
                             placeholder="you@email.com"
                             required
                         >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>
+                            Discord / Instagram
+                        </label>
+
+                        <input
+                            type="text"
+                            name="contact"
+                            placeholder="@username"
+                        >
+
                     </div>
 
                 </div>
 
             </div>
+
         </section>
 
 
-        <!-- COMMENT -->
+        <!-- 11 -->
+
         <section class="form-section">
 
-            <div class="section-number">11</div>
+            <div class="section-number">
+                11
+            </div>
 
             <div class="section-content">
 
@@ -480,15 +832,22 @@
                 ></textarea>
 
             </div>
+
         </section>
 
 
         <!-- SUMMARY -->
+
         <section class="summary-section">
 
-            <p class="eyebrow">ORDER SUMMARY</p>
+            <p class="eyebrow">
+                ORDER SUMMARY
+            </p>
 
-            <h2>Your project</h2>
+            <h2>
+                Your project
+            </h2>
+
 
             <div class="summary">
 
@@ -527,12 +886,28 @@
         </section>
 
 
-        <button type="submit" class="submit-button" id="submitButton">
-            <span>SUBMIT PROJECT</span>
-            <span>→</span>
+        <button
+            type="submit"
+            class="submit-button"
+            id="submitButton"
+        >
+
+            <span>
+                SUBMIT PROJECT
+            </span>
+
+            <span>
+                →
+            </span>
+
         </button>
 
-        <p class="form-status" id="formStatus"></p>
+
+        <p
+            class="form-status"
+            id="formStatus"
+        ></p>
+
 
     </form>
 

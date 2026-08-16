@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Edit Orders</title>
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="admin.css"
+    >
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+</head>
+
+
+<body>
+
+
+<div id="loginScreen" class="login-screen">
+
+    <div class="login-box">
+
+        <p class="eyebrow">
+            PRIVATE AREA
+        </p>
+
+        <h1>
+            Edit Orders
+        </h1>
+
+        <p>
+            Sign in to manage your commissions.
+        </p>
+
+
+        <form id="loginForm">
+
+            <input
+                type="email"
+                id="loginEmail"
+                placeholder="Email"
+                required
+            >
+
+            <input
+                type="password"
+                id="loginPassword"
+                placeholder="Password"
+                required
+            >
+
+            <button type="submit">
+                SIGN IN
+            </button>
+
+        </form>
+
+
+        <p
+            id="loginStatus"
+            class="status"
+        ></p>
+
+    </div>
+
+</div>
+
+
+<div
+    id="dashboard"
+    class="dashboard hidden"
+>
+
+
+    <header class="dashboard-header">
+
+        <div>
+
+            <p class="eyebrow">
+                EDIT COMMISSIONS
+            </p>
+
+            <h1>
+                Orders
+            </h1>
+
+        </div>
+
+
+        <button
+            id="logoutButton"
+            class="logout-button"
+        >
+            LOG OUT
+        </button>
+
+    </header>
+
+
+    <div class="dashboard-toolbar">
+
+        <div
+            id="orderCount"
+            class="order-count"
+        >
+            0 orders
+        </div>
+
+
+        <select id="statusFilter">
+
+            <option value="ALL">
+                All orders
+            </option>
+
+            <option value="NEW">
+                New
+            </option>
+
+            <option value="REVIEWING">
+                Reviewing
+            </option>
+
+            <option value="ACCEPTED">
+                Accepted
+            </option>
+
+            <option value="IN PROGRESS">
+                In progress
+            </option>
+
+            <option value="WAITING FOR CLIENT">
+                Waiting for client
+            </option>
+
+            <option value="REVISION">
+                Revision
+            </option>
+
+            <option value="COMPLETED">
+                Completed
+            </option>
+
+            <option value="CANCELLED">
+                Cancelled
+            </option>
+
+        </select>
+
+    </div>
+
+
+    <main id="ordersList">
+
+    </main>
+
+
+</div>
+
+
+<div
+    id="orderModal"
+    class="modal hidden"
+>
+
+    <div class="modal-overlay"></div>
+
+
+    <div class="modal-content">
+
+        <button
+            id="closeModal"
+            class="close-modal"
+        >
+            ×
+        </button>
+
+
+        <div id="modalBody"></div>
+
+    </div>
+
+</div>
+
+
+<script src="admin.js"></script>
+
+</body>
+</html>
