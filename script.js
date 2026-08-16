@@ -20,13 +20,16 @@ const REFERENCE_UPLOAD_PRESET =
    SUPABASE
 ========================================= */
 
-const {
-    createClient
-} = supabase;
-
 const db = supabase.createClient(
-    "https://shkeqdeengzgayrvcpme.supabase.co",
-    "sb_publishable_77x94aRUe9oNKNkai6tQEA_sqxhfiez"
+    SUPABASE_URL,
+    SUPABASE_KEY,
+    {
+        auth: {
+            persistSession: false,
+            autoRefreshToken: false,
+            detectSessionInUrl: false
+        }
+    }
 );
 
 
