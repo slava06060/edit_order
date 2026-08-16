@@ -20,6 +20,12 @@ const REFERENCE_UPLOAD_PRESET =
    SUPABASE
 ========================================= */
 
+const SUPABASE_URL =
+    "https://shkeqdeengzgayrvcpme.supabase.co";
+
+const SUPABASE_KEY =
+    "sb_publishable_77x94aRUe9oNKNkai6tQEA_sqxhfiez";
+
 const db = supabase.createClient(
     SUPABASE_URL,
     SUPABASE_KEY,
